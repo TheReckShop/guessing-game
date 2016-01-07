@@ -1,3 +1,4 @@
+var res1 = document.getElementById('resultOne');
 
 var counter = 0
 var user = prompt("What is your name?");
@@ -8,7 +9,8 @@ alert('Hi there, ' + user + ', I am going to ask you a few questions about mysel
 var answer1 = prompt(user +', Am I from Seattle? Please answer with "Y" or "N"');
 
 if (answer1 === 'Y' || answer1 === 'y' || answer1 === 'yes' || answer1 === 'YES' || answer2 ===  'Yes') {
-  alert('You are correct!');
+  //alert('You are correct!');
+  res1.textContent = 'You are correct!';
   counter += 1
 } else {
   alert('Sorry you are wrong, I am from Seattle.');
