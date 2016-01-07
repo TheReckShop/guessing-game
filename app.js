@@ -12,8 +12,9 @@ if (answer1 === 'Y' || answer1 === 'y' || answer1 === 'yes' || answer1 === 'YES'
   counter += 1
 } else {
   alert('Sorry you are wrong, I am from Seattle.');
-
 }
+
+
 
 var answer2 = prompt(user + ', Was I born in Germany? Please answer with "Yes" or "No"');
 
@@ -33,6 +34,7 @@ if (answer3 === 'Y' || answer3 ===  'y' || answer3 ===  'yes' || answer3 ===  'Y
   counter += 1
 }
 
+
 var number = 5;
 var answer4 = prompt('I\'m thinking of a number 1 through 10, see if you can guess which number it is.');
 
@@ -48,6 +50,16 @@ if (answer4 <= 4) {
 var answer4 = prompt('I\'m thinking of a number 1 through 10, see if you can guess which number it is.');
 }
 alert('Good work!');
+
+
+var answer5 = prompt('Are The Meters the greatest band ever? Please answer "Y" or "N"');
+
+if (answer5.toUpperCase() == "Y") {
+  alert(' That\'s right, ' + user + ' The Meters are the greatest band ever!')
+  counter += 1
+} else {
+  alert('I\'m sorry, but you\'re crazy!')
+}
 
 console.log(counter);
 alert('You got ' + counter + ' questions correct, nice work ' + user + '!');
