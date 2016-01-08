@@ -6,6 +6,7 @@ var answer3 = document.getElementById('resultThree');
 var answer4 = document.getElementById('resultFour');
 var answer5 = document.getElementById('resultFive');
 var answer6 = document.getElementById('resultSix')
+var result7 = document.getElementById('resultSeven')
 var total = document.getElementById('total');
 
 var user = prompt("What is your name?");
@@ -84,7 +85,7 @@ total.textContent = 'You got ' + counter + ' questions correct, nice work ' + us
 console.log(counter);
 }
 
-//guessingGame();
+guessingGame();
 
 
 function sixthQuestion() {
@@ -102,7 +103,7 @@ function sixthQuestion() {
   };
 }
 
-//sixthQuestion();
+sixthQuestion();
 
 
 function seventhQuestion() {
@@ -115,20 +116,17 @@ function seventhQuestion() {
   switch (answer7) {
 
     case 'apple':
-      alert('That\'s right, it\'s hard to beat a crisp apple in the summer heat!');
+      resultSeven.textContent = 'That\'s right, it\'s hard to beat a crisp apple in the summer heat!';
       break;
-
     case 'banana':
-    alert('While good, bananas are not my favorite.');
-    break;
-
+      resultSeven.textContent = 'While good, bananas are not my favorite.';
+      break;
     case 'orange':
-    alert('While good, oranges are not my favorite.');
-    break;
-
+      resultSeven.textContent = 'While good, oranges are not my favorite.';
+      break;
     case 'grapes':
-    alert('While good, grapes are not my favorite.');
-    break;
+      resultSeven.textContent = 'While good, grapes are not my favorite.';
+      break;
   };
 }
-//seventhQuestion();
+seventhQuestion();
