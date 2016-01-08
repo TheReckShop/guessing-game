@@ -6,7 +6,7 @@ console.log('The user\'s name is ' + user);
 
 alert('Hi there, ' + user + ', I am going to ask you a few questions about myself.');
 
-var answer1 = prompt(user +', Am I from Seattle? Please answer with "Y" or "N"');
+var answer1 = prompt(user + ', Am I from Seattle? Please answer with "Y" or "N"');
 
 if (answer1 === 'Y' || answer1 === 'y' || answer1 === 'yes' || answer1 === 'YES' || answer2 ===  'Yes') {
   //alert('You are correct!');
