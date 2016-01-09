@@ -5,37 +5,67 @@ var answer4 = document.getElementById('resultFour');
 var answer5 = document.getElementById('resultFive');
 var total = document.getElementById('total');
 
+var questArray = [
+  [
+    ' Am I from Seattle? Please answer with "Y" or "N"',
+    'Y',
+    'YES',
+    'You are correct!',
+    'Sorry you are wrong, I am from Seattle.'
+  ],
+    [
+    'Was I born in Germany? Please answer with "Yes" or "No"',
+    'Y',
+    'YES',
+    'You are correct, I was born in Wiesbaden Germany',
+    'I\'m sorry, that is incorrect'
+  ],
+    [
+    'Have I ever seen Star Wars? Please answer with "Y" or "N"',
+    'Y',
+    'YES',
+    'You are wrong, I am the last one that hasn\'t seen it.',
+    'That\'s right, I have not seen Star Wars.'
+    ]
+  ]
+
 var user = prompt("What is your name?");
 console.log('The user\'s name is ' + user);
 var counter = 0;
 
 function firstQuestion() {
-  var answer1 = prompt(user +', Am I from Seattle? Please answer with "Y" or "N"');
+  var answer1 = prompt(questArray[0][0]);
 
-  if (answer1.toUpperCase() === 'Y'|| answer1.toUpperCase() === 'YES') {
-    resultOne.textContent = 'You are correct!';
+  if (answer1.toUpperCase() === questArray[0][1]|| answer1.toUpperCase() === questArray[0[2]]) {
+    resultOne.textContent = questArray[0][3];
+    resultOne.className = 'right';
     counter += 1;
   } else {
-    resultOne.textContent = 'Sorry you are wrong, I am from Seattle.';
+    resultOne.textContent = questArray[0][4];
+    resultOne.className = 'wrong';
   }
 }
 
 function secondQuestion() {
-  var answer2 = prompt(user + ', Was I born in Germany? Please answer with "Yes" or "No"');
+  var answer2 = prompt(user + questArray[1][0]);
 
-  if (answer2.toUpperCase() === 'Y' || answer2.toUpperCase() ===  'YES') {
-    resultTwo.textContent = 'You are correct, I was born in Wiesbaden Germany';
-    counter =+ 1;
+  if (answer2.toUpperCase() === questArray[1][1] || answer2.toUpperCase() ===  questArray[1][2]) {
+    resultTwo.textContent = questArray[1][3];
+    resultTwo.className = 'right';
+    counter += 1;
   } else {
-    resultTwo.textContent = 'I\'m sorry, that is incorrect';
+    resultTwo.textContent = questArray[1][4];
+    resultTwo.className = 'wrong';
   }
 }
 function thirdQuestion() {
-  var answer3 = prompt(user + ', Have I ever seen Star Wars? Please answer with "Y" or "N"');
-  if (answer3.toUpperCase() === 'Y' || answer3.toUpperCase() ===  'YES' ) {
-      resultThree.textContent = 'You are wrong, I am the last one that hasn\'t seen it.';
+  var answer3 = prompt(questArray[2][0]);
+  if (answer3.toUpperCase() === questArray[2][1] || answer3.toUpperCase() ===  questArray[2][2] ) {
+      resultThree.textContent = questArray[2][3];
+      resultThree.className = 'right';
   } else {
-      resultThree.textContent = 'That\'s right, I have not seen Star Wars.';
+      resultThree.textContent = questArray[2][4];
+      resultThree.className = 'wrong';
       counter += 1;
   }
 }
